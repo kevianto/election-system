@@ -43,6 +43,7 @@ const LoginPage = () => {
         >
           Login
         </button>
+        <p>you don`t have an account <LInk  to="/signup">Sign up</LInk></p>
         {error && <p className="text-red-500 text-center mt-4">{error}</p>}
       </div>
     </div>
