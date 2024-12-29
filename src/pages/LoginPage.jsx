@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../services/Firebase';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -43,7 +44,7 @@ const LoginPage = () => {
         >
           Login
         </button>
-        <p>you don`t have an account <LInk  to="/signup">Sign up</LInk></p>
+        <p>you don`t have an account <Link  to="/signup" className='text-blue-500'>Sign up</Link></p>
         {error && <p className="text-red-500 text-center mt-4">{error}</p>}
       </div>
     </div>

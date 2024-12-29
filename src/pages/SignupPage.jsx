@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../services/Firebase';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const SignupPage = () => {
   const [email, setEmail] = useState('');
@@ -47,7 +48,7 @@ const SignupPage = () => {
         >
           Signup
         </button>
-        <p>you have an account <LInk  to="/">Login </LInk></p>
+        <p>you have an account <Link  to="/" className='text-blue-500'>Login </Link></p>
         {error && <p className="text-red-500 text-center mt-4">{error}</p>}
       </div>
     </div>
